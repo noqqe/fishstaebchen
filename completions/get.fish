@@ -1,0 +1,1 @@
+/Users/noqqe/.config/fisherman/get/completions/get.fish
