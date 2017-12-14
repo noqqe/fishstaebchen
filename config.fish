@@ -3,6 +3,12 @@
 set confdir ~/.config/fish/
 set completionsdir /usr/local/share/fish/vendor_completions.d/
 
+# Options
+
+set -U FZF_DEFAULT_OPTS "--height 5 -e --inline-info"
+set TERM screen-256color
+set EDITOR (which vim ^ /dev/null)
+
 # Completions
 #
 if test -d $completionsdir
@@ -21,5 +27,3 @@ if test -r ~/.fish.local
   source ~/.fish.local
 end
 
-set -U FZF_DEFAULT_OPTS "--height 5 -e --inline-info"
-set TERM screen-256color
