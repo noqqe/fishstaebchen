@@ -24,7 +24,6 @@ set fish_color_user a9fc6a
 set fish_color_valid_path underline
 
 # General
-set fish_greeting 'Deine mudder...'
 set fish_key_bindings fish_default_key_bindings
 
 # Pager
