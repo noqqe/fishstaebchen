@@ -4,5 +4,5 @@
 set CAL (which gcal)
 
 if test -x $CAL
-  alias cal "gcal -K -s Mo"
+  alias cal "gcal -K -s Mo .+"
 end
