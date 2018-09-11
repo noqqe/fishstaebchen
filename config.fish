@@ -9,7 +9,7 @@ set -U FZF_DEFAULT_OPTS "--height 5 -e --inline-info"
 set -x TERM screen-256color
 set -x EDITOR (which vim ^ /dev/null)
 
-set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /opt/X11/bin
+set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /opt/X11/bin /usr/local/sbin
 
 # Completions
 #
