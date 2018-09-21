@@ -14,6 +14,5 @@ function bind_bang
   end
 end
 
-function fish_user_key_bindings
-  bind ! bind_bang
-end
+# Binding for this function must happen in
+# .config/fish/functions/fish_user_key_bindings.fish

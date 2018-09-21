@@ -1,0 +1,1 @@
+/Users/noqqe/.config/fisherman/sudope/init.fish
