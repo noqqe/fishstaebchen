@@ -10,7 +10,7 @@ set -x TERM screen-256color
 set -x EDITOR (which nvim ^ /dev/null)
 set -x LANG "en_US.UTF-8"
 
-set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /opt/X11/bin /usr/local/sbin
+set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
 
 # Completions
 #
