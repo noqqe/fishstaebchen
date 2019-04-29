@@ -1,4 +1,5 @@
 fisherman/await
+oh-my-fish/plugin-aws
 barnybug/docker-fish-completion
 oh-my-fish/plugin-extract
 fisherman/fzf
@@ -11,5 +12,4 @@ fisherman/last_job_id
 fisherman/pwd_info
 fisherman/pwd_is_home
 fisherman/sol
-oh-my-fish/plugin-sudope
 fisherman/z

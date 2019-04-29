@@ -1,0 +1,1 @@
+/Users/noqqe/.config/fisherman/aws/completions/aws.fish

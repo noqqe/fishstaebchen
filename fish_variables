@@ -1,0 +1,22 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x205\x20\x2de\x20\x2d\x2dinline\x2dinfo
+SETUVAR FZF_LEGACY_KEYBINDINGS:1
+SETUVAR FZF_TMUX_HEIGHT:40\x25
+SETUVAR --export SSH_AGENT_PID:2428
+SETUVAR --export SSH_AUTH_SOCK:/var/folders/2j/sq1d484n33l8fxz9329ph3lc0000gp/T//ssh\x2dPcViwzK2rRRq/agent\x2e2427
+SETUVAR ZO_CMD:zo
+SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/Users/noqqe\x201/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/Users/noqqe\x201/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:/Users/noqqe\x201
+SETUVAR __fish_classic_git_prompt_initialized:\x1d
+SETUVAR __fish_init_2_39_8:\x1d
+SETUVAR __fish_init_2_3_0:\x1d
+SETUVAR __fish_init_3_x:\x1d
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_status:ff79c6
+SETUVAR fish_color_user:bd93f9
+SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell
+SETUVAR fisher_active_prompt:sol
+SETUVAR fisher_dependency_count:git_util\x1ehost_info\x1ehumanize_duration\x1epwd_info\x1epwd_is_home\x1elast_job_id\x1esol\x1eawait\x1eget\x1efzf\x1eaws

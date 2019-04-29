@@ -63,6 +63,31 @@ function fish_prompt --description 'Write out the prompt'
         set prompt_status ' ' (set_color $fish_color_status) "$last_status" "$normal"
     end
 
+    # Status return
+    set -l status_copy $status
+    set -l status_code $status_copy
 
-    echo -n -s (set_color yellow) (date "+%F %H:%M ") (set_color $fish_color_user) "$USER" $normal @ (set_color $fish_color_host) (prompt_hostname) $normal ' ' (set_color $color_cwd) $PWD $normal (__fish_git_prompt) $normal $prompt_status \n $suffix " "
+    set -l color_normal (set_color normal)
+    set -l color_error (set_color $fish_color_error)
+    set -l color "$color_normal"
+
+    switch "$status_copy"
+        case 0 "$__sol_status_last"
+            set status_code
+    end
+
+    set -g __sol_status_last $status_copy
+
+    if test "$status_copy" -ne 0
+        set color "$color_error"
+    end
+
+    set -l duration (echo $CMD_DURATION | humanize_duration)
+
+    echo -n -s (set_color yellow) (date "+%F %H:%M ") (set_color $fish_color_user) "$USER" $normal @ (set_color $fish_color_host) (prompt_hostname) $normal ' ' (set_color $color_cwd) $PWD $normal (__fish_git_prompt) $normal $prompt_status " ($duration) " \n $suffix " "
+end
+
+# # Do not show execution time on the right side.
+function fish_right_prompt
+  # do nothing
 end
