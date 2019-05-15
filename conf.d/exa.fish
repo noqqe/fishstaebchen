@@ -3,7 +3,7 @@
 
 set EXA (which exa 2>/dev/null)
 
-if test -x $EXA
+if test -x "$EXA"
 
   alias l='exa -lh --git -g --time-style long-iso'
   alias ls='exa'

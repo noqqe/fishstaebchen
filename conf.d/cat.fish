@@ -3,6 +3,6 @@
 #
 set BAT (which bat)
 
-if test -x $BAT
+if test -x "$BAT"
   alias cat $BAT
 end
