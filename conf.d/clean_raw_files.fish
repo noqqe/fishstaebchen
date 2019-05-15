@@ -24,6 +24,8 @@ function clean_raw_files
     if not test -f {$ORIG_DIR}/{$FILENAME}.JPG
       echo "Did not find $FILENAME.JPG. Deleting $FILENAME.ARW"
       rm $FILENAME.ARW
+    else
+      echo "Found $FILENAME.JPG. Keeping $FILENAME.ARW"
     end
   end
 end
