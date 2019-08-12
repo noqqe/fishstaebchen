@@ -4,7 +4,7 @@ if test -x (which keychain) ; and status --is-interactive;
 
   # Look for all keys and add them to the agent
 
-  set -l keys (grep -l "PRIVATE KEY---" ~/.ssh/*)
+  set -l keys (grep -l "PRIVATE KEY---" ~/.ssh/* 2>/dev/null)
   for key in $keys ;
     ssh-add $key ^/dev/null
   end
