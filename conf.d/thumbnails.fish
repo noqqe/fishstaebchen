@@ -9,6 +9,6 @@ function create_thumbs ()
   # generate thumbnail
   for x in *.jpg
     set -l tn_name (echo $x | sed 's/\.jpg/-thumb.jpg/')
-    convert $x -define jpeg:size=150x150 -thumbnail '150x150>' $tn_name
+    convert $x -define jpeg:size=300x300 -thumbnail '300x300>' $tn_name
   end
 end
