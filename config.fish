@@ -1,7 +1,6 @@
 # Variables
 
 set confdir ~/.config/fish/
-set completionsdir /usr/local/share/fish/vendor_completions.d/
 
 # Options
 
@@ -14,8 +13,10 @@ set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
 
 # Completions
 #
-if test -d $completionsdir
-  source $completionsdir/*
+set -l completions_vendor /usr/local/share/fish/vendor_completions.d/*
+
+for completion in $completions_vendor
+  source $completion
 end
 
 # conf.d
