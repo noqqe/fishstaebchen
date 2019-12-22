@@ -3,9 +3,8 @@ function pkg_find
 	set -l index /tmp/.pkg.index.html
 	set -l remote_dir https://ftp.fau.de/pub/OpenBSD/(uname -r)/packages/(uname -m)/
 
-	echo $remote_dir
 	if not test -r $index
-		echo "Index file too old. Updating ..."
+		echo "Index file not existing. Downloading ..."
 		ftp -o $index -VM $remote_dir
 	end
 
