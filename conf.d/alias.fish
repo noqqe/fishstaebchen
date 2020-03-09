@@ -1,5 +1,5 @@
 # Alias
-#
+
 alias sl=ls
 alias la='ls -AF'
 alias ll='ls -al'
