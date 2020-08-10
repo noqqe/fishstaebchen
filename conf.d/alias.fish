@@ -1,9 +1,9 @@
 # Alias
 
 alias sl=ls
-alias la='ls -AF'
-alias ll='ls -al'
-alias l='ls -lah'
+# alias la='ls -AF'
+# alias ll='ls -al'
+# alias l='ls -lah'
 alias c='clear'
 alias x="exit"
 alias h='history'
