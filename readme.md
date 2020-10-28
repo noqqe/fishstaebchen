@@ -8,5 +8,3 @@ git clone https://github.com/noqqe/fishstaebchen.git ~/.config/fish
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fisher
 ```
-test
-
