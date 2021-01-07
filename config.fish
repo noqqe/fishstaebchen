@@ -23,7 +23,7 @@ end
 # conf.d
 #
 if test -d $confdir/conf.d/
-  source $confdir/conf.d/*
+  source $confdir/conf.d/*.fish
 end
 
 # Local source
