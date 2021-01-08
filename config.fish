@@ -12,6 +12,8 @@ set -x LANG "en_US.UTF-8"
 
 set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
 
+set -g fish_escape_delay_ms 300
+
 # Completions
 #
 set -l completions_vendor /usr/local/share/fish/vendor_completions.d/*
