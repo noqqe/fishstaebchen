@@ -12,6 +12,7 @@ set -x LANG "en_US.UTF-8"
 
 set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
 
+# https://github.com/fish-shell/fish-shell/issues/6950
 set -g fish_escape_delay_ms 300
 
 # Completions
