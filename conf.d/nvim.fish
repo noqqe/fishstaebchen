@@ -5,5 +5,6 @@ set NVIM (which nvim ^ /dev/null)
 
 if test -x $NVIM
   alias vim=$NVIM
-  set EDITOR $NVIM
+  set -x EDITOR $NVIM
+  set -x MANPAGER="nvim -c 'set ft=man' -"
 end
