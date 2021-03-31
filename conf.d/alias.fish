@@ -10,7 +10,7 @@ alias h='history'
 
 alias re='tmux attach -d -t NOC'
 alias reload="source $confdir/config.fish"
-alias wttr='curl "wttr.in/~Nuremberg?lang=de&2&Q"'
+alias wttr='curl "wttr.in/~Bayreuth?1qp&lang=de&m"'
 
 # vi like aliases
 alias ':q'='exit'
