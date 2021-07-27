@@ -5,3 +5,4 @@ barnybug/docker-fish-completion
 oh-my-fish/plugin-extract
 fishpkg/fish-humanize-duration
 aliz-ai/google-cloud-sdk-fish-completion
+lgathy/google-cloud-sdk-fish-completion
