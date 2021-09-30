@@ -82,7 +82,11 @@ function fish_prompt --description 'Write out the prompt'
         set color "$color_error"
     end
 
-    set -l duration (echo $CMD_DURATION )
+    if type -q humantime
+      set duration (humantime $CMD_DURATION)
+    else
+      set duration (echo $CMD_DURATION)
+    end
 
     echo -n -s (set_color yellow) (date "+%F %H:%M ") (set_color $fish_color_user) "$USER" $normal @ (set_color $fish_color_host) (prompt_hostname) $normal ' ' (set_color $color_cwd) $PWD $normal (__fish_git_prompt) $normal $prompt_status " ($duration) " \n $suffix " "
 end
