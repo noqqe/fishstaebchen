@@ -1,14 +1,13 @@
 # Alias
 
 alias sl=ls
-# alias la='ls -AF'
-# alias ll='ls -al'
-# alias l='ls -lah'
+alias la='ls -AF'
+alias ll='ls -al'
+alias l='ls -lah'
 alias c='clear'
 alias x="exit"
 alias h='history'
 
-alias re='tmux attach -d -t NOC'
 alias reload="source $confdir/config.fish"
 alias wttr='curl "wttr.in/~Bayreuth?1qp&lang=de&m"'
 

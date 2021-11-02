@@ -4,18 +4,26 @@
 
 alias g='git'
 
+# clone
+function gc
+  git clone $argv[1]
+end
+
 # adding
 alias ga='git add'
 alias gall='git add .'
 
 # checkout new branch with tracking
-alias gcb='git checkout -b'
+alias gsc='git switch -c'
 
 # status
 alias gs='git status'
 alias gl='git log -15 --oneline --decorate'
 alias gll='git log --graph --pretty=oneline --abbrev-commit --decorate'
-alias cdiff='git diff --cached'
+
+# diff
+alias gd='git diff'
+alias gdc='git diff --cached'
 
 ### Functions
 
