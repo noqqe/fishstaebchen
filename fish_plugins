@@ -7,3 +7,4 @@ fishpkg/fish-humanize-duration
 aliz-ai/google-cloud-sdk-fish-completion
 lgathy/google-cloud-sdk-fish-completion
 jorgebucaran/humantime.fish
+LumaKernel/fish-fd-complete
