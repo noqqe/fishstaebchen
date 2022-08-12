@@ -1,10 +1,10 @@
+oh-my-fish/plugin-aws
+jethrokuan/fzf
+jethrokuan/z
 barnybug/docker-fish-completion
 oh-my-fish/plugin-extract
 fishpkg/fish-humanize-duration
-LumaKernel/fish-fd-complete
-jorgebucaran/humantime.fish
 aliz-ai/google-cloud-sdk-fish-completion
-oh-my-fish/plugin-aws
-jethrokuan/z
-jethrokuan/fzf
+jorgebucaran/humantime.fish
+LumaKernel/fish-fd-complete
 jorgebucaran/fisher
