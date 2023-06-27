@@ -10,28 +10,28 @@ if test "$FZF_DISABLE_KEYBINDINGS" -ne 1
         bind \ct '__fzf_find_file'
         bind \cr '__fzf_reverse_isearch'
         bind \ec '__fzf_cd'
-        bind \co '__fzf_open'
+        bind \co '__fzf_open --editor'
         bind \cg '__fzf_search_git_log'
 
         if ! test "$fish_key_bindings" = fish_default_key_bindings
             bind -M insert \ct '__fzf_find_file'
             bind -M insert \cr '__fzf_reverse_isearch'
             bind -M insert \ec '__fzf_cd'
-            bind -M insert \co '__fzf_open'
+            bind -M insert \co '__fzf_open --editor'
             bind -M insert \cg '__fzf_search_git_log'
         end
     else
         bind \ct '__fzf_find_file'
         bind \cr '__fzf_reverse_isearch'
         bind \ec '__fzf_cd'
-        bind \eo '__fzf_open'
+        bind \eo '__fzf_open --editor'
         bind \cg '__fzf_search_git_log'
 
         if ! test "$fish_key_bindings" = fish_default_key_bindings
             bind -M insert \ct '__fzf_find_file'
             bind -M insert \cr '__fzf_reverse_isearch'
             bind -M insert \ec '__fzf_cd'
-            bind -M insert \eo '__fzf_open'
+            bind -M insert \eo '__fzf_open --editor'
             bind -M insert \cg '__fzf_search_git_log'
         end
     end

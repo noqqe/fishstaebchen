@@ -42,6 +42,10 @@ function gp
   git push origin $BRANCH
 end
 
+# Show branches by last committer 
+# https://stackoverflow.com/a/39251131
+alias gblc="git for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)    %(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authorname refs/remotes"
+
 # # shortcut for rebase pull
 # function gpur {
 #   if [[ -z $1 ]]; then
