@@ -1,9 +1,8 @@
 # golang system and directory settings if installed
 
-set -l gopath (which go 2>/dev/null)
 set -l gohome $HOME/.go/ # thats so nice. go home. thihihi.
 
-if test -x "$gopath"
+if command -q go
   if not test -d "$gohome"
     set -x GOPATH $gohome
     set PATH $PATH $gohome/bin

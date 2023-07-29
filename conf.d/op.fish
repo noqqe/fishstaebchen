@@ -1,6 +1,6 @@
 # Onepassword CLI for fish
 
-if test -x (which op)
+if command -q op
 
   # This function requires the first inital login to be done manually
   # https://support.1password.com/command-line-getting-started/

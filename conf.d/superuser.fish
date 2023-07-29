@@ -2,13 +2,10 @@
 # me by just typing "s". As im using OpenBSD (doas) this needs to
 # be a plugin.
 
-set DOAS (which doas ^ /dev/null)
-set SUDO (which sudo ^ /dev/null)
-
-if not test -z $SUDO
+if command -q sudo
   alias s="sudo -Es"
 end
 
-if not test -z $DOAS
+if command -q doas
   alias s="doas -s"
 end

@@ -1,4 +1,4 @@
 # Enable direnv https://direnv.net/docs/hook.html
-if test -x (which direnv);
+if command -q direnv
   eval (direnv hook fish)
 end
