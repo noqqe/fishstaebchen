@@ -7,7 +7,7 @@ set confdir ~/.config/fish/
 set -U FZF_DEFAULT_OPTS "--height 5 -e --inline-info"
 set fish_greeting
 set -x TERM screen-256color
-set -x EDITOR (which nvim ^ /dev/null)
+set -x EDITOR vim
 set -x LANG "en_US.UTF-8"
 
 set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin

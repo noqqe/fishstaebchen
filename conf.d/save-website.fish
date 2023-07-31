@@ -1,5 +1,5 @@
 function save-webpage ()
-  if not test -x (which wget)
+  if command -q wget
     echo "wget not found"
     return
   end
