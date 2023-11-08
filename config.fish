@@ -29,6 +29,13 @@ if test -d $confdir/conf.d/
   source $confdir/conf.d/*.fish
 end
 
+# custom.d
+#
+if test -d $confdir/custom.d/
+  source $confdir/custom.d/*.fish
+end
+
+
 # Local source
 #
 if test -r ~/.fish.local

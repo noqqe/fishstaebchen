@@ -1,1 +1,0 @@
-/Users/noqqe/.config/fisherman/aws/init.fish
