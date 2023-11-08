@@ -23,18 +23,20 @@ for completion in $completions_vendor
   source $completion
 end
 
+# custom.d
+#
+for custom in $confdir/custom.d/*.fish
+  source $custom
+end
+
 # conf.d
 #
 if test -d $confdir/conf.d/
   source $confdir/conf.d/*.fish
 end
 
-# custom.d
-#
-if test -d $confdir/custom.d/
-  source $confdir/custom.d/*.fish
-end
 
+source /Users/fnbaum/.config/fish/custom.d/prompt.fish
 
 # Local source
 #
