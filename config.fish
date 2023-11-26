@@ -35,9 +35,6 @@ if test -d $confdir/conf.d/
   source $confdir/conf.d/*.fish
 end
 
-
-source /Users/fnbaum/.config/fish/custom.d/prompt.fish
-
 # Local source
 #
 if test -r ~/.fish.local
