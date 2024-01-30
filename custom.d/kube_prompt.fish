@@ -12,6 +12,13 @@ function __kube_ps_update_cache
     end
   end
 
+
+  function __stat_mtime
+    # modified because thy python version is way too slow
+    # python -c "print(__import__('os').stat(__import__('sys').argv[1]).st_mtime)" $argv
+    gstat -c %Y $argv
+  end
+
   function __kube_ps_cache_namespace
     set -l ns (kubectl config view --minify -o 'jsonpath={..namespace}' 2>/dev/null)
     if test -n "$ns"
@@ -36,7 +43,7 @@ function __kube_ps_update_cache
 
   for conf in (string split ':' "$kubeconfig")
     if test -r "$conf"
-      if test -z "$__kube_ps_timestamp";
+      if test -z "$__kube_ps_timestamp"; or test (__stat_mtime "$conf") -gt "$__kube_ps_timestamp"
         __kube_ps_cache_context
         __kube_ps_cache_namespace
         set -g __kube_ps_kubeconfig "$kubeconfig"
