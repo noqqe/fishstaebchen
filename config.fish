@@ -42,3 +42,5 @@ if test -r ~/.fish.local
 end
 
 
+
+source /usr/local/opt/asdf/libexec/asdf.fish
