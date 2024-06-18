@@ -42,37 +42,18 @@ function gp
   git push origin $BRANCH
 end
 
+# Merge all commits from current branch
+function gsquash
+  set B main
+
+  if git rev-parse --verify master
+    set B master
+  end
+
+  git reset --soft (git merge-base $B HEAD)
+  git commit
+end
+
 # Show branches by last committer 
 # https://stackoverflow.com/a/39251131
 alias gblc="git for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)    %(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authorname refs/remotes"
-
-# # shortcut for rebase pull
-# function gpur {
-#   if [[ -z $1 ]]; then
-#     BRANCH=$(git rev-parse --abbrev-ref HEAD)
-#   else
-#     BRANCH=$1
-#   fi
-#   git pull --rebase origin $BRANCH
-# }
-
-# # update branch from remote
-# function gub {
-#   if [[ -z $1 ]]; then
-#     BRANCH=$(git rev-parse --abbrev-ref HEAD)
-#   else
-#     BRANCH=$1
-#   fi
-
-#   if [[ ! -z $1 ]]; then
-#     git checkout $BRANCH
-#   fi
-
-# 	git branch -u origin/$BRANCH $BRANCH && \
-#   git pull origin $BRANCH --ff-only
-
-#   # switch back to branch where I came from
-#   if [[ ! -z $1 ]]; then
-# 	  git checkout -
-#   fi
-# }
