@@ -4,8 +4,6 @@ set confdir ~/.config/fish/
 
 # Options
 
-echo fish config
-
 set -U FZF_DEFAULT_OPTS "--height 5 -e --inline-info"
 set fish_greeting
 set -x TERM screen-256color
@@ -28,7 +26,6 @@ end
 # custom.d
 #
 for custom in $confdir/custom.d/*.fish
-  echo custom.d loop $custom
   source $custom
 end
 
