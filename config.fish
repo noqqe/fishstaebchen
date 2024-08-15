@@ -4,19 +4,21 @@ set confdir ~/.config/fish/
 
 # Options
 
+echo fish config
+
 set -U FZF_DEFAULT_OPTS "--height 5 -e --inline-info"
 set fish_greeting
 set -x TERM screen-256color
 set -x EDITOR vim
 set -x LANG "en_US.UTF-8"
 
-set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
+set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin /opt/homebrew/bin
 
 # https://github.com/fish-shell/fish-shell/issues/6950
 set -g fish_escape_delay_ms 300
 
 # Completions
-#
+
 set -l completions_vendor /usr/local/share/fish/vendor_completions.d/*
 
 for completion in $completions_vendor
@@ -26,6 +28,7 @@ end
 # custom.d
 #
 for custom in $confdir/custom.d/*.fish
+  echo custom.d loop $custom
   source $custom
 end
 
@@ -40,3 +43,5 @@ end
 if test -r ~/.fish.local
   source ~/.fish.local
 end
+
+
