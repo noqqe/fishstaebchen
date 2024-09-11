@@ -2,6 +2,6 @@
 #
 # This way is see "ssh root@host" in my iTerm when being logged in into another host
 
-function fish_title
-   echo $argv[1]
-end
+# function fish_title
+#     echo $argv[1] $pwd
+# # end
