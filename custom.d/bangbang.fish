@@ -5,14 +5,8 @@
 #
 # https://github.com/fish-shell/fish-shell/issues/288#issuecomment-306212011
 
-function bind_bang
-  switch (commandline -t)
-  case "!"
-    commandline -t $history[1]; commandline -f repaint
-  case "*"
-    commandline -i !
-  end
-end
+function last_history_item; echo $history[1]; end 
+abbr -a !! --position anywhere --function last_history_item
 
 # Binding for this function must happen in
 # .config/fish/functions/fish_user_key_bindings.fish
