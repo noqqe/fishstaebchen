@@ -87,7 +87,7 @@ function fish_prompt --description 'Write out the prompt'
       set duration (echo $CMD_DURATION)
     end
 
-    echo -n -s (set_color yellow) (date "+%F %H:%M ") (set_color $fish_color_user) "$USER" $normal @ (set_color $fish_color_host) (prompt_hostname) $normal ' ' (set_color $color_cwd) (prompt_pwd -D 5) $normal (__fish_git_prompt) (__kube_prompt) $normal $prompt_status " ($duration) " \n $suffix " "
+    echo -n -s (set_color yellow) (date "+%F %H:%M ") (set_color $fish_color_user) "$USER" $normal @ (set_color $fish_color_host) (prompt_hostname) $normal ' ' (set_color $color_cwd) (prompt_pwd -D 5) $normal (__fish_git_prompt) $normal $prompt_status " ($duration) " \n $suffix " "
 end
 
 # # Do not show execution time on the right side.
