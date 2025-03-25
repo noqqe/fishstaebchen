@@ -7,6 +7,7 @@ alias l='ls -lah'
 alias c='clear'
 alias x="exit"
 alias h='history'
+alias env="env | sort"
 
 alias reload="source $confdir/config.fish"
 alias wttr='curl "wttr.in/~Bayreuth?1qp&lang=de&m"'
