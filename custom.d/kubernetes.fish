@@ -2,7 +2,10 @@
 
 if command -q kubectl; 
   alias k=kubectl
+end
 
+if command -q kubie; 
+  alias kn="kubie ns"
 end
 
 if command -q helm; 
