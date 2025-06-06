@@ -12,6 +12,8 @@ alias env="env | sort"
 alias reload="source $confdir/config.fish"
 alias wttr='curl "wttr.in/~Bayreuth?1qp&lang=de&m"'
 
+alias remove_escape='gsed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g"'
+
 # vi like aliases
 alias ':q'='exit'
 alias ':x'='exit'
