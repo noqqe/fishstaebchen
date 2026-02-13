@@ -13,3 +13,12 @@ function vault_show_secret
   printf "# %s/%s\n" $argv[1] $secret
   vault kv get -format json $argv[1]/$secret | jq .data.data
 end 
+
+function vault_show_approles
+  for env in dev qa stage prod;
+    echo $argv[1]-$env
+    echo -n "role_id: "; vault read -field=role_id auth/approle/role/$argv[1]-$env/role-id
+    echo -n "secret_id: "; vault write -format=yaml -field=secret_id -f auth/approle/role/$argv[1]-$env/secret-id
+  end
+end
+
