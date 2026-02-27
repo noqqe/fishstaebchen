@@ -7,7 +7,7 @@ function aws_show_secret
   set name (aws secretsmanager list-secrets | jq -r .SecretList[].Name | fzf)
   set value "$(aws secretsmanager get-secret-value --secret-id $name |jq -r '.SecretString')"
   if echo $value | jq -e . &>/dev/null 
-    echo $value | jq -r '. | fromjson'
+    echo $value | jq -r '.'
   else
     echo $value 
   end 
