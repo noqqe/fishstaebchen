@@ -7,7 +7,15 @@ set confdir ~/.config/fish/
 set fish_greeting
 set -x EDITOR vim
 set -x LANG "en_US.UTF-8"
-set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin 
+
+
+# if running on nixos 
+if command -q nixos-version 
+  set -x PATH /run/wrappers/bin /home/$USER/.nix-profile/bin /nix/profile/bin /home/$USER/.local/state/nix/profile/bin /etc/profiles/per-user/$USER/bin /nix/var/nix/profiles/default/bin /run/current-system/sw/bin
+else
+  set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin 
+end 
+
 
 # https://github.com/fish-shell/fish-shell/issues/6950
 set -g fish_escape_delay_ms 300
