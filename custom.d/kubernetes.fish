@@ -31,3 +31,16 @@ function kubernetes_show_secrets
   echo Secret $secret:
   kubectl get secret $secret -o go-template='{{range $k,$v := .data}}{{printf " %s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'
 end
+
+function kubernetes_show_node_ips
+    set podjson (kubectl get pods --all-namespaces -o json)
+
+    kubectl get nodes -o json | jq -r '.items[].metadata.name' | while read -l node
+        set stats (echo $podjson | jq -r --arg node "$node" '
+          [.items[] | select(.spec.nodeName == $node)] as $p |
+          "\($p | length)\t\([$p[] | select(.status.podIP != null) | .status.podIP] | unique | length)"
+        ')
+        set capacity (kubectl get node "$node" -o jsonpath='{.status.allocatable.pods}')
+        echo -e "$node\tPods: $stats[1]/$capacity\tUnique IPs: $stats[2]"
+    end | column -t
+end

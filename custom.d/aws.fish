@@ -27,3 +27,9 @@ function aws_show_ssm
     echo $value 
   end 
 end
+
+function aws_show_free_ips
+   aws ec2 describe-subnets \
+        --query 'Subnets[*].{SubnetId:SubnetId,VpcId:VpcId,CIDR:CidrBlock,AZ:AvailabilityZone,FreeIPs:AvailableIpAddressCount,Name:Tags[?Key==`Name`].Value|[0]}' \
+        --output table
+end
